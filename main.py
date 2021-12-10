@@ -37,8 +37,7 @@ class Configs(object):
         
       
     ]
-    DOODSTREAM
-    _DOMAIN = os.environ.get("DOODSTREAM_DOMAIN", DOODSTREAM_DOMAINS[2])
+    DOODSTREAM_DOMAIN = os.environ.get("DOODSTREAM_DOMAIN", DOODSTREAM_DOMAINS[2])
 
 
 DoodstreamBot = Client(
