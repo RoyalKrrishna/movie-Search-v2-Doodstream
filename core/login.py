@@ -13,7 +13,7 @@ from selenium.common.exceptions import (
 async def doodstream_login(username: str, password: str):
     print("Bot on Standby ...")
     login_url = "https://doodstream.com/login?type=login"
-    get_id_page_url = "https://www.pdisk.net/withdraw"
+    get_id_page_url = "https://www.doodstream.com/withdraw"
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--disable-dev-shm-usage")
@@ -21,7 +21,7 @@ async def doodstream_login(username: str, password: str):
     options.add_argument("--disable-gpu")
     options.add_argument("--disable-infobars")
     driver = webdriver.Chrome(options=options)
-    print("Trying to Login to PDisk Account ...")
+    print("Trying to Login to DOODSTREAM Account ...")
     driver.get(login_url)
     print("Adding Username in Box ...")
     driver.find_element_by_xpath("//input[@placeholder='Username/Email']").send_keys(username)
@@ -56,7 +56,7 @@ async def doodstream_login(username: str, password: str):
         print(f"PDisk User ID: '{user_id}'")
         ## --- Collect Cookies --- ##
         cookies = ""
-        cookie_names = ["lang", "user_uid", "uid", "EGG_SESS", "csrfToken", "pdisksid"]
+        cookie_names = ["lang", "user_uid", "uid", "EGG_SESS", "csrfToken", "doodstreamid"]
         for cookie in range(len(cookie_names)):
             cookies += f"{cookie_names[cookie]}={driver.get_cookie(cookie_names[cookie])['value']}; "
         driver.quit()
