@@ -1,23 +1,23 @@
 # (c) https://t.me/Mr_Robot_t
 
-from core.login import pdisk_login
+from core.login import doodstream_login
 
-PDisk_DB = {}
+DOODSTREAM_DB = {}
 
 
 async def get_cookies(username: str, password: str) -> str:
-    if not PDisk_DB:
-        user_id, cookies = await pdisk_login(username, password)
-        PDisk_DB["cookies"] = cookies
-        PDisk_DB["user_id"] = user_id
-        PDisk_DB["username"] = username
-        PDisk_DB["password"] = password
+    if not DOODSTREAM_DB:
+        user_id, cookies = await doodstream_login(username, password)
+        DOODSTREAM_DB["cookies"] = cookies
+        DOODSTREAM_DB["user_id"] = user_id
+        DOODSTREAM_DB["username"] = username
+        DOODSTREAM_DB["password"] = password
 
-    return PDisk_DB["cookies"]
+    return DOODSTREAM_DB["cookies"]
 
 
 async def set_cookies(data: dict):
-    PDisk_DB["username"] = data["username"]
-    PDisk_DB["password"] = data["password"]
-    PDisk_DB["user_id"] = data["user_id"]
-    PDisk_DB["cookies"] = data["cookies"]
+    DOODSTREAM_DB["username"] = data["username"]
+    DOODSTREAM_DB["password"] = data["password"]
+    DOODSTREAM_DB["user_id"] = data["user_id"]
+    DOODSTREAM_DB["cookies"] = data["cookies"]
