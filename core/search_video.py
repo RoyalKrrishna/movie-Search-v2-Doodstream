@@ -19,7 +19,7 @@ async def search_doodstream_videos(query: str, username: str, password: str) -> 
         response = requests.get(search_api.format(parse.quote(query)), cookies={"Cookie": cookies}, headers={"User-Agent": user_agent})
         data = response.json()
         if data["msg"] == "Please login again":
-            user_id, cookies = await pdisk_login(username, password)
+            user_id, cookies = await doodstream_login(username, password)
             await set_cookies({
                 "username": username,
                 "password": password,
