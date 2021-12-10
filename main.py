@@ -32,7 +32,7 @@ class Configs(object):
     DOODSTREAM_PASSWORD = os.environ.get("DOODSTREAM_PASSWORD", "")
     MAX_RESULTS = int(os.environ.get("MAX_RESULTS", 5))
     # Which DOODSTREAM Domain?
-    PDISK_DOMAINS = [
+    DOODSTREAM_DOMAINS = [
         "https://doodstream.com/",
         
       
