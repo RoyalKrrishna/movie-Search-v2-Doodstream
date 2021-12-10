@@ -63,7 +63,7 @@ async def text_handler(_, m: Message):
                                  reply_markup=InlineKeyboardMarkup([
                                      [InlineKeyboardButton("For Any help contact", url="https://t.me/ALL_WEB_SERIESSS_REQUEST_BOT")]
                                  ]))
-    response = await search_pdisk_videos(m.text.split(" ", 1)[-1], Configs.PDISK_USERNAME, Configs.PDISK_PASSWORD)
+    response = await search_doodstream_videos(m.text.split(" ", 1)[-1], Configs.DOODSTREAM_USERNAME, Configs.DOODSTREAM_PASSWORD)
     if isinstance(response, Exception):
         traceback.print_exc()
         try: await editable.edit("Failed to search!",
