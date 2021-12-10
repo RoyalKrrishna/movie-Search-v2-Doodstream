@@ -25,13 +25,13 @@ if os.path.exists("configs.env"):
 
 
 class Configs(object):
-    API_ID = int(os.environ.get("API_ID", 0))
-    API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-    DOODSTREAM_USERNAME = os.environ.get("DOODSTREAM_USERNAME", "")
-    DOODSTREAM_PASSWORD = os.environ.get("DOODSTREAM_PASSWORD", "")
-    MAX_RESULTS = int(os.environ.get("MAX_RESULTS", 5))
-    # Which DOODSTREAM Domain?
+    API_ID = int(os.environ.get("API_ID", "8285896"))
+    API_HASH = os.environ.get("API_HASH", "e3414f0c606435a0244ae51ba46c4295")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "2091614742:AAHI1vIzyvNoDRbQCf8isX4O7axuBwbC7y0")
+    DOODSTREAM_USERNAME = os.environ.get("DOODSTREAM_USERNAME", "RoyalKrrishna")
+    DOODSTREAM_PASSWORD = os.environ.get("DOODSTREAM_PASSWORD", "fuckyoureenmayee1")
+    MAX_RESULTS = int(os.environ.get("MAX_RESULTS", "25"))
+    # DOODSTREAM Domain
     DOODSTREAM_DOMAINS = [
         "https://doodstream.com/",
         
